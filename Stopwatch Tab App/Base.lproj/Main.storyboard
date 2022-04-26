@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="digital-7 (mono).ttf">
+            <string>Digital-7Mono</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Stopwatch-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="stopwatchTabViewController" customModule="Stopwatch_Tab_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stopwatch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npo-dS-PkM">
+                                <rect key="frame" x="50" y="64" width="314" height="32"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="31"/>
+                                <color key="textColor" red="0.93801188469999996" green="0.0680379495" blue="0.418159008" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfi-Fo-hyA">
+                                <rect key="frame" x="0.0" y="764" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="BNv-0A-0zZ"/>
+                                    <barButtonItem title="Item" image="play.fill" catalog="system" id="bh4-mx-8xe">
+                                        <connections>
+                                            <action selector="playButton:" destination="9pv-A4-QxB" id="BHw-CZ-G5C"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="KK1-xO-tpK"/>
+                                    <barButtonItem title="Item" image="stop.fill" catalog="system" id="qqw-Jo-XUd">
+                                        <connections>
+                                            <action selector="stopButton:" destination="9pv-A4-QxB" id="1MY-HG-fDC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="UXH-q7-5Zu"/>
+                                </items>
+                            </toolbar>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="60" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gO-CX-p3Z">
+                                <rect key="frame" x="0.0" y="121" width="414" height="216"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOm-QQ-Z5Q">
+                                <rect key="frame" x="50" y="367" width="314" height="35"/>
+                                <fontDescription key="fontDescription" name="Digital-7Mono" family="Digital-7 Mono" pointSize="38"/>
+                                <color key="textColor" red="0.2466752529" green="0.76747459169999999" blue="0.63400840759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8gO-CX-p3Z" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="3li-vl-KT5"/>
+                            <constraint firstItem="nfi-Fo-hyA" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="3oI-6i-ktc"/>
+                            <constraint firstItem="VOm-QQ-Z5Q" firstAttribute="top" secondItem="8gO-CX-p3Z" secondAttribute="bottom" constant="30" id="8xU-Mh-E1N"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="VOm-QQ-Z5Q" secondAttribute="trailing" constant="50" id="BLq-UX-KVW"/>
+                            <constraint firstItem="VOm-QQ-Z5Q" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="50" id="GQv-f6-LkO"/>
+                            <constraint firstItem="8gO-CX-p3Z" firstAttribute="top" secondItem="npo-dS-PkM" secondAttribute="bottom" constant="25" id="Nwz-r0-mUC"/>
+                            <constraint firstItem="8gO-CX-p3Z" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="Sc9-bB-AV1"/>
+                            <constraint firstItem="npo-dS-PkM" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="50" id="UUI-jk-PLi"/>
+                            <constraint firstItem="npo-dS-PkM" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="20" id="cgC-LG-PZi"/>
+                            <constraint firstItem="nfi-Fo-hyA" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="tlq-3P-HcL"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="npo-dS-PkM" secondAttribute="trailing" constant="50" id="zWP-eq-ITn"/>
+                            <constraint firstItem="nfi-Fo-hyA" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="za6-iG-Ykz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Stopwatch" image="first" selectedImage="Stopwatch" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="timerLabel" destination="VOm-QQ-Z5Q" id="oDh-zw-CTH"/>
+                        <outlet property="timerPicker" destination="8gO-CX-p3Z" id="w5i-6v-iIv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
+        </scene>
+        <!--Temperature-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="tempConversionTabViewController" customModule="Stopwatch_Tab_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oJF-wm-Ebq">
+                                <rect key="frame" x="50" y="123.5" width="314" height="32"/>
+                                <segments>
+                                    <segment title="°F ➝ °C"/>
+                                    <segment title="°C ➝ °F"/>
+                                </segments>
+                                <connections>
+                                    <action selector="conversionSegmentedControl:" destination="8rJ-Kc-sve" eventType="valueChanged" id="ciE-pQ-Vjn"/>
+                                </connections>
+                            </segmentedControl>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcu-VM-pDA">
+                                <rect key="frame" x="0.0" y="164.5" width="414" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="svA-pY-fMC"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="k6T-WO-zBV"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwr-Eg-jjb">
+                                <rect key="frame" x="134" y="405.5" width="146" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.96090840593299498" green="0.4939917563831604" blue="0.10135286965978704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Conversion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxA-D4-KKE">
+                                <rect key="frame" x="20" y="70" width="374" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="24"/>
+                                <color key="textColor" red="0.90204435589999998" green="0.050932444629999997" blue="0.41050946710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dcu-VM-pDA" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="1HU-mJ-ZlK"/>
+                            <constraint firstItem="oJF-wm-Ebq" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="50" id="2Fi-Ew-jpc"/>
+                            <constraint firstItem="PxA-D4-KKE" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="26" id="2I1-TD-vBB"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="mwr-Eg-jjb" secondAttribute="trailing" constant="134" id="3Pt-In-V7J"/>
+                            <constraint firstItem="dcu-VM-pDA" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="BeA-7j-ZUo"/>
+                            <constraint firstItem="oJF-wm-Ebq" firstAttribute="top" secondItem="PxA-D4-KKE" secondAttribute="bottom" constant="29" id="R7d-Lp-64w"/>
+                            <constraint firstItem="mwr-Eg-jjb" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="134" id="YFD-RL-raI"/>
+                            <constraint firstItem="dcu-VM-pDA" firstAttribute="top" secondItem="oJF-wm-Ebq" secondAttribute="bottom" constant="10" id="aNI-GJ-trN"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="PxA-D4-KKE" secondAttribute="trailing" constant="20" id="aXA-vB-9Hu"/>
+                            <constraint firstItem="PxA-D4-KKE" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="cLv-OL-es8"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="oJF-wm-Ebq" secondAttribute="trailing" constant="50" id="rSt-jz-ifp"/>
+                            <constraint firstItem="mwr-Eg-jjb" firstAttribute="top" secondItem="dcu-VM-pDA" secondAttribute="bottom" constant="25" id="y70-ZE-0gm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Temperature" image="second" selectedImage="Temperature" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="convertedLabel" destination="mwr-Eg-jjb" id="JbG-KY-A2l"/>
+                        <outlet property="segmentControl" destination="oJF-wm-Ebq" id="TnS-0C-v2g"/>
+                        <outlet property="tempPicker" destination="dcu-VM-pDA" id="Z57-1B-3nh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.27536231884062" y="359.59821428571428"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Stopwatch" width="25" height="25"/>
+        <image name="Temperature" width="25" height="25"/>
+        <image name="first" width="25" height="25"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <image name="second" width="25" height="25"/>
+        <image name="stop.fill" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
